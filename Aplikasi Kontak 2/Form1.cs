@@ -26,7 +26,7 @@ namespace Aplikasi_Kontak_2
         {
             txtNama.Clear();
             txtHP.Clear();
-            dgvKontak.Rows.Clear();
+            //dgvKontak.Rows.Clear();
             txtNama.Focus();       }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -58,6 +58,16 @@ namespace Aplikasi_Kontak_2
             dgvKontak.Rows[count].Cells[1].Value = txtNama.Text;
             dgvKontak.Rows[count].Cells[2].Value = txtHP.Text;
             
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            bersih2();
+        }
+
+        private void bersih2()
+        {
+            dgvKontak.Rows.Clear();
         }
     }
 }
